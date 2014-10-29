@@ -1,0 +1,11 @@
+#########################################
+
+Un script et des images pour générer une partition à l'aide d'un fichier texte (pas de notion de temps : pour l’apprentissage des notes)
+
+Necessite imagemagick !!!
+
+A lancer depuis le repertoire ./generate_partition.sh
+
+Ne gère pas encore les diese et les bémole ainsi que la notion du temps
+
+le fichier doit être edité avec une note par ligne.
