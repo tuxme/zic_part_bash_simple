@@ -16,7 +16,7 @@ while read NOTE
 		CPT=$((CPT + 1))
 	done < $FILE
 
-echo "Generation de la partition"
+echo "Generation des lignes de partition"
 
 cp ORIG/porte.png $TMP_DIR/${FILE_NAME}.png
 CPT_CREA=1
@@ -44,10 +44,10 @@ while [[ "$CPT_CREA" != "$CPT" ]]
 	done
 
 LINE_CPT=2
+echo "Generation de la partition"
 cp $TMP_DIR/${FILE_NAME}_1.png $TMP_DIR/${FILE_NAME}_FINAL.png
 while [[ $LINE_CPT -le $LINE ]]
 	do
-		echo "$LINE_CPT $LINE " 
 		convert -append  $TMP_DIR/${FILE_NAME}_FINAL.png $TMP_DIR/${FILE_NAME}_${LINE_CPT}.png $TMP_DIR/${FILE_NAME}_FINAL.png
 		LINE_CPT=$((LINE_CPT+1))
 	done
