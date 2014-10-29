@@ -13,6 +13,7 @@ echo "Generation Notes"
 while read NOTE
 	do
 		composite -compose Over ORIG/${NOTE}.png ORIG/porte.png $TMP_DIR/${CPT}.png
+		composite -pointsize 60  label:${NOTE} -gravity North $TMP_DIR/${CPT}.png $TMP_DIR/${CPT}.png
 		CPT=$((CPT + 1))
 	done < $FILE
 
@@ -52,7 +53,7 @@ while [[ $LINE_CPT -le $LINE ]]
 		LINE_CPT=$((LINE_CPT+1))
 	done
 cp $TMP_DIR/${FILE_NAME}_FINAL.png ${FILE}_generated_partition.png
-rm -Rf  $TMP_DIR/
+#rm -Rf  $TMP_DIR/
 
 echo "La partition générée se trouve : ${FILE}_generated_partition.png"
 
