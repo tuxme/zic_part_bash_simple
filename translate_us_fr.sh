@@ -23,7 +23,7 @@ FR_TAB[7]="SI"
 
 while read line
 	do
-	for US in 1 2 3 4 5 6 7
+	for US in {1..7}
 		do
 			if [[ $line == ${US_TAB[$US]}* ]] 
 				then
