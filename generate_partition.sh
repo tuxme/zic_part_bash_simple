@@ -21,7 +21,7 @@ echo "Generation des lignes de partition"
 
 cp ORIG/porte.png $TMP_DIR/${FILE_NAME}.png
 CPT_CREA=1
-MAX_LINE=7
+MAX_LINE=5
 
 LINE_CREATE=1
 CPT_MAX_LINE=1
